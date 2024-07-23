@@ -33,8 +33,4 @@ public class User {
 
     @Column(nullable = false)
     private String password;
-
-    @ManyToMany
-    private Set<ChatRoom> holdings;
-
 }

@@ -1,6 +1,5 @@
 package com.aldoj.uichats_api.data.chat_room;
 
-import java.util.Set;
 import java.util.UUID;
 
 import com.aldoj.uichats_api.data.user.User;
@@ -11,7 +10,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -33,7 +31,4 @@ public class ChatRoom {
     @ManyToOne
     @JoinColumn(name = "author")
     private User author;
-
-    @ManyToMany
-    private Set<User> participants;
 }
